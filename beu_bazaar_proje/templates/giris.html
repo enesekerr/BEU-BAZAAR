@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/c20485228a.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+rel="stylesheet">
+<title>Kullanıcı Girişi</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style1.css') }}">
+</head>
+<body>
+<section id="menu">
+    <div id="logo">BEU BAZAAR</div>
+    <nav>
+        <a href="/"><i class="fas fa-home ikon "></i>Anasayfa</a>
+        <a href="/kayit-yap"><i class="fas fa-solid fa-address-card"></i> Kayıt Ol</a>
+    </nav>
+</section>
+    
+<div class="container">
+    <form action="/giris-yap" method="POST">
+      <h2>Kullanıcı Girişi</h2>
+      <div class="input-group">
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Şifre:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Giriş Yap</button>
+    
+  </form>
+  {% if error %}
+    <p>{{error}}</p>
+  {% endif %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beu Bazaar</title>
+    <script src="https://kit.fontawesome.com/c20485228a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style4.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<section id="menu">
+    <div id="logo">BEU BAZAAR</div>
+    <nav>
+        {% if display==False %}
+            <a href="/"><i class="fas fa-home ikon "></i>Anasayfa</a>
+            <a href="/ilanlar"><i class="fas fa-solid fa-scroll"></i>İlanlar</a>
+            <a href="/ilan-ekle"><i class="fas fa-solid fa-plus"></i>Ilan Ekle</a>
+            <a href="/kayit-yap"><i class="fas fa-solid fa-address-card"></i> Kayıt Ol</a>
+            <a href="/giris-yap"><i class="fas fa-solid fa-door-open"></i> Giriş Yap</a>
+        {% endif %}
+
+        {% if display==True %}
+            <a href="/"><i class="fas fa-home ikon "></i>Anasayfa</a>
+            <a href="ilanlar"><i class="fas fa-solid fa-scroll"></i> İlanlar</a>
+            <a href="/ilan-ekle"><i class="fas fa-solid fa-plus"></i>Ilan Ekle</a>
+            <a href="/cikis"><i class="fas fa-solid fa-plus"></i>Çıkış Yap</a>
+        {% endif %}
+    </nav>
+</section>
+
+<section id="anasayfa">
+    <div id="black">
+    </div>
+    <div id="icerik">
+        <h2>BEU BAZAAR</h2>
+        <hr width=300 align:left>
+        <p>Üniversitemizin ilk ve tek forum sitesine hoş geldiniz. Bu forumda ikinci el eşya alıp satabilir
+            sözleşmesi bitmeden evlerinizi devredebilir ve istediğiniz soruları üniversite öğrencilerimize sorabilirsiniz. 
+        </p>
+    </div>
+</section>
+<section id="hakkimizda">
+    <h3>Hakkımızda</h3>
+    <div class="container">
+        <div id="sol">
+            <h5 id="h5sol">
+                BEU Bazaar Üniversite Öğrencileri İçin Eşsiz Bir Forum Deneyimi 
+            </h5>
+        </div>
+        <div id="sag">
+            <span>B</span>
+            <p id="psag">EU Bazaar, üniversite öğrencileri için özel olarak geliştirilmiş bir forum platformudur. Sitemiz, öğrencilerin çeşitli ihtiyaçlarını karşılamak ve etkileşimlerini artırmak amacıyla tasarlanmıştır. İşte BEU Bazaar'ın sunduğu özelliklerden bazıları:
+
+                2. El Eşya Alım Satımı: Öğrenciler, ihtiyaç duydukları veya artık kullanmadıkları eşyaları kolayca satabilir veya satın alabilirler. Bu sayede ekonomik ve çevreci bir yaklaşımla ihtiyaçları karşılanırken, aynı zamanda sürdürülebilir bir tüketim kültürü desteklenir.
+                
+                Devredilebilir Ev Sözleşmeleri: Sözleşmesi bitmeyen evlerin devri, özellikle öğrenciler için büyük bir kolaylık sağlar. Öğrenciler, mevcut konutlarını devretmek veya uygun bir konut bulmak için platformu kullanabilirler. Bu, öğrenciler arasında konut değişimini ve uygun yaşam alanlarını bulmayı kolaylaştırır.
+                
+                Soru ve Cevap Platformu: Öğrenciler, forumumuzda sorularını paylaşabilir ve diğer üyelerden veya uzmanlardan cevaplar alabilirler. Akademik konular, günlük yaşamla ilgili sorunlar veya öneriler için ideal bir iletişim platformu sunar.
+                
+                BEU Bazaar, kullanıcı dostu arayüzü ve çeşitli fonksiyonlarıyla öğrencilerin güvenli ve verimli bir şekilde etkileşimde bulunmasını sağlar. Aynı zamanda, kullanıcıların kişisel bilgilerini korumak için gerekli güvenlik önlemlerini de içerir.
+                
+                Üniversite öğrencilerine özel olarak tasarlanmış olan BEU Bazaar, sosyal, ekonomik ve akademik anlamda değerli bir platform sunar. Öğrencilerin ihtiyaçlarını karşılayarak, güçlü bir topluluk oluşturmayı hedefler.
+        </div>
+        <img src="{{url_for('static', filename='images/78.png')}}" alt="beu_bazaar"
+        class="img-fluid mt100">
+        <p id="pson">
+            BEU Bazaar, üniversite öğrencileri için özel olarak geliştirilmiş bir forum platformudur. Sitemiz, öğrencilerin çeşitli ihtiyaçlarını karşılamak ve etkileşimlerini artırmak amacıyla tasarlanmıştır. İşte BEU Bazaar'ın sunduğu özelliklerden bazıları:
+
+2. El Eşya Alım Satımı: Öğrenciler, ihtiyaç duydukları veya artık kullanmadıkları eşyaları kolayca satabilir veya satın alabilirler. Bu sayede ekonomik ve çevreci bir yaklaşımla ihtiyaçları karşılanırken, aynı zamanda sürdürülebilir bir tüketim kültürü desteklenir.
+
+Devredilebilir Ev Sözleşmeleri: Sözleşmesi bitmeyen evlerin devri, özellikle öğrenciler için büyük bir kolaylık sağlar. Öğrenciler, mevcut konutlarını devretmek veya uygun bir konut bulmak için platformu kullanabilirler. Bu, öğrenciler arasında konut değişimini ve uygun yaşam alanlarını bulmayı kolaylaştırır.
+
+Soru ve Cevap Platformu: Öğrenciler, forumumuzda sorularını paylaşabilir ve diğer üyelerden veya uzmanlardan cevaplar alabilirler. Akademik konular, günlük yaşamla ilgili sorunlar veya öneriler için ideal bir iletişim platformu sunar.
+
+BEU Bazaar, kullanıcı dostu arayüzü ve çeşitli fonksiyonlarıyla öğrencilerin güvenli ve verimli bir şekilde etkileşimde bulunmasını sağlar. Aynı zamanda, kullanıcıların kişisel bilgilerini korumak için gerekli güvenlik önlemlerini de içerir.
+
+Üniversite öğrencilerine özel olarak tasarlanmış olan BEU Bazaar, sosyal, ekonomik ve akademik anlamda değerli bir platform sunar. Öğrencilerin ihtiyaçlarını karşılayarak, güçlü bir topluluk oluşturmayı hedefler.
+    </div>
+</section>
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for msg in messages %}
+            <div class="alert alert-success" style="position: absolute; top: 10%; text-align: center; left: 48%; padding-left: 40px; padding-right: 40px; font-family:'Courier New', Courier, monospace;" role="alert">{{msg}}</div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+</body>
+</html>

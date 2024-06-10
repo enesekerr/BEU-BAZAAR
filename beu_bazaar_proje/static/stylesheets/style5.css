@@ -1,0 +1,90 @@
+body{
+    font-family: 'Nunito',sans-serif;
+    margin: 0px;
+    background-image: url(../images/tasarim.png);
+}
+#menu{
+    height: 80px;
+    padding: 0 20px;
+}
+
+#logo{
+    font-size: 30px;
+    line-height:80px;
+    color:#003666;
+    float:left;
+}
+
+nav{
+    float:right;
+    line-height: 80px;
+}
+nav a:link{
+    text-decoration: none;
+    margin-right: 25px;
+    color:#003666;
+}
+nav a:hover{
+    border-bottom: 2px solid #003666;
+}
+nav a:visited{
+    text-decoration: none;
+    margin-right: 25px;
+    color:#003666;
+}
+.ikon{
+    margin-right: 7px;
+    font-size:16px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Adjust width as needed */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover; /* Scales image to fill container */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-contact {
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.card-contact span {
+    margin-right: 10px;
+}
+
+.card-contact i {
+    margin-right: 5px;
+}
+
+.card-text {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.card-message {
+    color: #000000;
+}

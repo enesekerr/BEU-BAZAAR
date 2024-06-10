@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forum Ekle Sayfası</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style3.css') }}">
+
+</head>
+<body>
+    <section id="menu">
+        <div id="logo">BEU BAZAAR</div>
+        <nav>
+            <a href="/"><i class="fas fa-home ikon "></i>Anasayfa</a>
+            <a href="/ilanlar"><i class="fas fa-solid fa-scroll"></i>İlanlar</a>
+            <a href="/cikis"><i class="fas fa-solid fa-plus"></i>Çıkış Yap</a>
+        </nav>
+    </section>
+    <div class="container">
+        <h2>İlan Ekle</h2>
+        <form action="/ilan-ekle" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="konu">Konu Başlığı:</label>
+                <input type="text" id="konu" name="konu" required>
+            </div>
+            <div class="form-group">
+                <label for="mesaj">Mesaj:</label>
+                <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="resim">Resim Yükle:</label>
+                <input type="file" id="resim" name="resim">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Gönder">
+            </div>
+            {% if info %}
+                <p>{{info}}</p>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>
